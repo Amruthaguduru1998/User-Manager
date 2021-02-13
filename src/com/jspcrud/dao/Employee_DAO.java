@@ -26,13 +26,25 @@ public class Employee_DAO {
 //	method to insert the employee's data into table
 	public static int insert(Employee emp) {
 		int i = 0;
+		int eno = 0;
 		try {
 			Connection connection = Employee_DAO.getConnection();
-			PreparedStatement ps = connection.prepareStatement("insert into emp values(?,?,?");
-			ps.setInt(1, emp.getEno());
-			ps.setString(2, emp.getEname());
-			ps.setDouble(3, emp.getSalary());
-			i = ps.executeUpdate();
+			
+//			query to get max eno from table
+			PreparedStatement ps_max_eno = connection.prepareStatement("select max(eno) from emp");
+			ResultSet rs_max_eno = ps_max_eno.executeQuery();
+			if (rs_max_eno.next()) {
+				eno = rs_max_eno.getInt(1);
+				eno++;
+				
+//				query to get insert employee into table
+				PreparedStatement ps = connection.prepareStatement("insert into emp values(?,?,?");
+				ps.setInt(1, eno);
+				ps.setString(2, emp.getEname());
+				ps.setDouble(3, emp.getSalary());
+				i = ps.executeUpdate();
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
