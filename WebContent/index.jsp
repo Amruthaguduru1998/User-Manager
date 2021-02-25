@@ -14,6 +14,7 @@
 		<form action="table.jsp" method="get">
 			<div class="topnav">
 			  <a class="active" href="addUser.html">Add User</a>
+			  <a class="active" href="logout.java">Log out</a>
 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
@@ -28,22 +29,6 @@
 					<th align="left">Mobile Number</th>
 					<th align="left">Action</th>
 					<th align="left"></th>
-				</tr>
-				<tr>
-					<td align="left">My Name</td>
-					<td align="left">email@gmail.com</td>
-					<td align="left">password</td>
-					<td align="left">123567890</td>
-					<td align="left"><a class="action_table_p" href="update.jsp">Update</a></td>
-					<td align="left"><a class="action_table_p" href="delete.jsp">Delete</a></td>
-				</tr>
-				<tr>
-					<td align="left">My Name</td>
-					<td align="left">email@gmail.com</td>
-					<td align="left">password</td>
-					<td align="left">123567890</td>
-					<td align="left"><a class="action_table_p" href="update.jsp">Update</a></td>
-					<td align="left"><a class="action_table_p" href="delete.jsp">Delete</a></td>
 				</tr>
 				<tr>
 					<td align="left">My Name</td>

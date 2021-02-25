@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Add User</title>
+ 		<link rel="stylesheet" href="CSS/addUser.css">
+	</head>
+	<body>
+		<!-- This page is to show the list of all the records and to give option to insert, update or delete user -->
+		<!-- create table crud_user(sr_no number(10), name varchar2(2000), email varchar2(2000), password varchar2(2000), mobile_number number(10)); -->
+		
+		<form action="addUser" method="post">
+			<div class="topnav">
+			  <a class="active" href="index.jsp">Home</a>
+			  <a class="active" href="logout.java">Log out</a>
+			  <div class="search-container">
+			      <input type="text" placeholder="Search User" name="name">
+			      <input class="button_css" type="submit" value="Go">
+			  </div>
+			</div>
+			<p><b></b></p>
+			<div class="table_whole">
+				<table  align="center">
+					<tr>
+						<th align="left">Name</th>
+						<th align="left"><input class="table" type="text" name="name" placeholder="User's Name"></th>
+					</tr>
+					<tr>
+						<th align="left">Email</th>
+						<th align="left"><input class="table" type="email" name="email" placeholder="User's Email"></th>
+					</tr>
+					<tr>
+						<th align="left">Password</th>
+						<th align="left"><input class="table" type="password" name="password" placeholder="User's Password"></th>
+					</tr>
+					<tr>
+						<th align="left">Number</th>
+						<th align="left"><input class="table" type="tel" name="number" placeholder="User's Number"></th>
+					</tr>
+					<tr>
+						<th></th>
+						<th align="left"><input type="submit" value="Save" class="table_button"></th>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</body>
+</html>
