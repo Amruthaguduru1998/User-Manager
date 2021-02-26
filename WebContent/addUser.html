@@ -13,7 +13,7 @@
 		<form action="addUser" method="post">
 			<div class="topnav">
 			  <a class="active" href="index.jsp">Home</a>
-			  <a class="active" href="logout.java">Log out</a>
+			  <a class="active" href="logout.jsp">Logout</a>
 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
@@ -24,23 +24,41 @@
 				<table  align="center">
 					<tr>
 						<th align="left">Name</th>
-						<th align="left"><input class="table" type="text" name="name" placeholder="User's Name"></th>
+						<th align="left"><input class="table"type="text" name="user_name" placeholder="User's Name"></th>
 					</tr>
 					<tr>
 						<th align="left">Email</th>
-						<th align="left"><input class="table" type="email" name="email" placeholder="User's Email"></th>
+						<th align="left"><input class="table"type="email" name="email" placeholder="User's Email"></th>
+					</tr>
+					<tr>
+						<th align="left">Address</th>
+						<th align="left"><input class="table"type="text" name="address" placeholder="User's Address"></th>
+					</tr>
+					<tr>
+						<th align="left">DOB</th>
+						<th align="left"><input class="table"type="date" name="dob" placeholder="User's Date of Birth"></th>
+					</tr>
+					<tr>
+						<th align="left">Gender</th>
+						<th align="left">
+							  <select name="gender" class="table">
+							      <option value="male">Male</option>
+							      <option value="female">Female</option>
+							      <option value="other">Other</option>
+							  </select>
+						</th>
 					</tr>
 					<tr>
 						<th align="left">Password</th>
-						<th align="left"><input class="table" type="password" name="password" placeholder="User's Password"></th>
+						<th align="left"><input class="table"type="password" name="password" placeholder="User's Password"></th>
 					</tr>
 					<tr>
 						<th align="left">Number</th>
-						<th align="left"><input class="table" type="tel" name="number" placeholder="User's Number"></th>
+						<th align="left"><input class="table"type="tel" name="number" placeholder="User's Number"></th>
 					</tr>
 					<tr>
 						<th></th>
-						<th align="left"><input type="submit" value="Save" class="table_button"></th>
+						<th align="left"><input type="submit"value="Save" class="table_button"></th>
 					</tr>
 				</table>
 			</div>

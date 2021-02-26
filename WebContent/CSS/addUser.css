@@ -113,13 +113,14 @@
 			  color: white;
 			}
 			table {
-
 			  border-collapse: collapse;
 			  font-family: Helvetica;
 			  
 			}
 			.table_whole {
+			  padding-top: 10px;
 			  background-color: #2196F3;
+			  padding-bottom: 10px;
 			}
 			th {
 			  border-collapse: collapse;
@@ -146,6 +147,9 @@
               background-color: white;
               border: 2px solid white;
               margin-right: 5px;
+			  border-radius: 5px;
+			  border: 2px solid #2196F3;
+			  width: 200px;
 			}
 			.table_button {
 			  padding: 6px;
@@ -156,12 +160,15 @@
               color: #2196F3;
               border: 2px solid white;
               margin-right: 5px;
+              border-radius: 5px;
+			  border: 2px solid #2196F3;
+			  width: 200px;
 			}
 			.table_button:hover {
 			  padding: 6px;
 			  margin-top: 8px;
 			  font-size: 17px;
-			  border: none;
+			  border: white;
               background-color: #2196F3;
               color: white;
               border: 2px solid white;

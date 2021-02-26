@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="JSP-CRUD">
+        
+    <wb-module deploy-name="User-Manager">
+                
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="JSP-CRUD"/>
-        <property name="java-output-path" value="/JSP-CRUD/build/classes"/>
+                
+        <property name="java-output-path" value="/User-Manager/build/classes"/>
+        <property name="context-root" value="User-Manager"/>
+            
     </wb-module>
+    
 </project-modules>

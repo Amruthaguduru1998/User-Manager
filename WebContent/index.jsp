@@ -1,3 +1,6 @@
+<%@page import="com.usermanager.modal.User"%>
+<%@page import="com.usermanager.dao.User_DAO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -14,31 +17,64 @@
 		<form action="table.jsp" method="get">
 			<div class="topnav">
 			  <a class="active" href="addUser.html">Add User</a>
-			  <a class="active" href="logout.java">Log out</a>
+			  <a class="active" href="logout.jsp">Logout</a>
 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
 			  </div>
 			</div>
+			<%
+			// check weather the user is logedin or not
+			boolean valid_user = true;
+			if (!valid_user) {
+			%>
+			<p><b></b></p>
+			
+			<div class="login_first" align="center">PLEASE LOGIN FIRST</div>
+			
+			<%
+			} else {
+			%>
+			
 			<p><b></b></p>
 			<table width="100%" align="left">
 				<tr>
 					<th align="left">Name</th>
 					<th align="left">Email</th>
+					<th align="left">Address</th>
+					<th align="left">DOB</th>
+					<th align="left">Gender</th>
 					<th align="left">Password</th>
 					<th align="left">Mobile Number</th>
 					<th align="left">Action</th>
 					<th align="left"></th>
+					<th align="left"></th>
 				</tr>
+				<%
+				// invoke users method from User_DAO class
+				List<User> users = User_DAO.users();
+				
+				for (User user: users) {
+				%>
 				<tr>
-					<td align="left">My Name</td>
-					<td align="left">email@gmail.com</td>
-					<td align="left">password</td>
-					<td align="left">123567890</td>
+					<td align="left"><%=user.getName()%></td>
+					<td align="left"><%=user.getEmail()%></td>
+					<td align="left"><%=user.getAddress() %></td>
+					<td align="left"><%=user.getDob()%></td>
+					<td align="left"><%=user.getGender()%></td>
+					<td align="left"><%=user.getPassword()%></td>
+					<td align="left"><%=user.getNumber()%></td>
+					<td align="left"><a class="action_table_p" href="view.jsp">View</a></td>
 					<td align="left"><a class="action_table_p" href="update.jsp">Update</a></td>
 					<td align="left"><a class="action_table_p" href="delete.jsp">Delete</a></td>
 				</tr>
+				<%	
+				}
+				%>
 			</table>
+			<%
+			}
+			%>
 		</form>
 	</body>
 </html>
