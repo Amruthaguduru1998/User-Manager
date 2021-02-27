@@ -13,7 +13,6 @@
 	<body>
 		
 			<%
-			
 			int user_sr_no = Integer.parseInt(request.getParameter("id"));
 			User user = User_DAO.retrieveUser(user_sr_no);
 			int sr_no = user.getSr_no();
@@ -32,10 +31,11 @@
 			  <a class="active" href="addUser.html">Add User</a>
 			  <a class="active" href='updateUser_form.jsp?id=<%=sr_no%>'>Update User</a>
 			  <a class="active" href='deleteUser?id=<%=sr_no%>'>Delete User</a>
-			  <div class="search-container">
+<!-- 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
 			  </div>
+ -->
 			</div>
 			<p><b></b></p>
 			

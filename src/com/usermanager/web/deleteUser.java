@@ -37,10 +37,10 @@ public class deleteUser extends HttpServlet {
 		int i = User_DAO.delete(sr_no);
 		
 		if (i == 1) {
-			out.print("User Deleted");
+			out.print("<p align=\"center\">User Deleted</p>");
 			request.getRequestDispatcher("/index.jsp").include(request, response);
 		} else {
-			out.print("Failed");
+			out.print("<p align=\"center\">Failed</p>");
 			request.getRequestDispatcher("/index.jsp").include(request, response);
 		}
 		

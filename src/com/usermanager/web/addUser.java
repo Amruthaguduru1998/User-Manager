@@ -68,10 +68,10 @@ public class addUser extends HttpServlet {
 						int i = User_DAO.insert(user);
 						
 						if (i == 1) {
-							out.print("User Added");
+							out.print("<p align=\"center\">User Added</p>");
 							request.getRequestDispatcher("/addUser.html").include(request, response);
 						} else {
-							out.print("Failed");
+							out.print("<p align=\"center\">Failed</p>");
 							request.getRequestDispatcher("/addUser.html").include(request, response);
 						}
 					}

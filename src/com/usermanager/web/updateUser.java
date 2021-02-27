@@ -54,12 +54,12 @@ public class updateUser extends HttpServlet {
 		user.setSr_no(sr_no);
 		
 		int i = User_DAO.update(user);
-		
+		//<p align="center">Failed</p>
 		if (i == 1) {
-			out.print("Details Updated");
+			out.print("<p align=\"center\">Details Updated</p>");
 			request.getRequestDispatcher("/index.jsp").include(request, response);
 		} else {
-			out.print("Update Failed");
+			out.print("<p align=\"center\">Failed</p>");
 			request.getRequestDispatcher("/index.jsp").include(request, response);
 		}
 		

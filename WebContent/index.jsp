@@ -17,10 +17,11 @@
 		<form action="table.jsp" method="get">
 			<div class="topnav">
 			  <a class="active" href="addUser.html">Add User</a>
-			  <div class="search-container">
+<!-- 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
 			  </div>
+ -->
 			</div>
 			
 			<p><b></b></p>

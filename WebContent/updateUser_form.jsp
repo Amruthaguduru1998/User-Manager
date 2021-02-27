@@ -30,10 +30,11 @@
 		<form action="updateUser" method="post">
 			<div class="topnav">
 			  <a class="active" href="index.jsp">Home</a>
-			  <div class="search-container">
+<!-- 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
 			  </div>
+ -->
 			</div>
 			<p><b></b></p>
 			<div class="table_whole">
