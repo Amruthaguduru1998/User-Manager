@@ -25,6 +25,10 @@
 			  color: white;
 			}
 			
+			.topnav a.active:hover {
+			  color: #000080;
+			}
+			
 			.topnav .search-container {
 			  float: right;
 			}

@@ -17,24 +17,11 @@
 		<form action="table.jsp" method="get">
 			<div class="topnav">
 			  <a class="active" href="addUser.html">Add User</a>
-			  <a class="active" href="logout.jsp">Logout</a>
 			  <div class="search-container">
 			      <input type="text" placeholder="Search User" name="name">
 			      <input class="button_css" type="submit" value="Go">
 			  </div>
 			</div>
-			<%
-			// check weather the user is logedin or not
-			boolean valid_user = true;
-			if (!valid_user) {
-			%>
-			<p><b></b></p>
-			
-			<div class="login_first" align="center">PLEASE LOGIN FIRST</div>
-			
-			<%
-			} else {
-			%>
 			
 			<p><b></b></p>
 			<table width="100%" align="left">
@@ -64,17 +51,14 @@
 					<td align="left"><%=user.getGender()%></td>
 					<td align="left"><%=user.getPassword()%></td>
 					<td align="left"><%=user.getNumber()%></td>
-					<td align="left"><a class="action_table_p" href="view.jsp">View</a></td>
-					<td align="left"><a class="action_table_p" href="update.jsp">Update</a></td>
-					<td align="left"><a class="action_table_p" href="delete.jsp">Delete</a></td>
+					<td align="left"><a class="action_table_p" href='viewUser.jsp?id=<%=user.getSr_no()%>'>View</a></td>
+					<td align="left"><a class="action_table_p" href='updateUser_form.jsp?id=<%=user.getSr_no()%>'>Update</a></td>
+					<td align="left"><a class="action_table_p" href='deleteUser?id=<%=user.getSr_no()%>'>Delete</a></td>
 				</tr>
 				<%	
 				}
 				%>
 			</table>
-			<%
-			}
-			%>
 		</form>
 	</body>
 </html>

@@ -54,20 +54,20 @@ public class User_DAO {
 	
 //	method to retrieve the user
 //	this method gets the user data from the modal class and after invocation it retrieves the user data from database
-	public static User retrieveUser() {
+	public static User retrieveUser(int sr_no) {
 		User user = new User();
 		try {
 			Connection con = User_DAO.gerConnection();
 			PreparedStatement ps = con.prepareStatement("select * from umadmin_supreme_begawo where sr_no = ?");
-			ps.setInt(1, user.getSr_no());
+			ps.setInt(1, sr_no);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				user.setSr_no(rs.getInt(1));
 				user.setName(rs.getString(2));
 				user.setEmail(rs.getString(3));
-				user.setPassword(rs.getString(4));
-				user.setPassword(rs.getString(5));
-				user.setPassword(rs.getString(6));
+				user.setAddress(rs.getString(4));
+				user.setDob(rs.getString(5));
+				user.setGender(rs.getString(6));
 				user.setPassword(rs.getString(7));
 				user.setNumber(rs.getLong(8));
 			}
@@ -79,12 +79,12 @@ public class User_DAO {
 	
 //	method to delete the user
 //	this method gets the sr_no from the modal and after invocation it deletes the user information from database
-	public static int delete(User user) {
+	public static int delete(int sr_no) {
 		int i = 0;
 		try {
 			Connection con = User_DAO.gerConnection();
 			PreparedStatement ps = con.prepareStatement("delete umadmin_supreme_begawo where sr_no = ?");
-			ps.setInt(1, user.getSr_no());
+			ps.setInt(1, sr_no);
 			i = ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -116,22 +116,21 @@ public class User_DAO {
 	
 //	method to retrieve the user by name
 //	this method will get the name from the modal and return the users with the same name after invocation
-	public static List<User> users_name() {
+	public static List<User> users_name(String name) {
 		List<User> users = new ArrayList<User>();
 		try {
-			User user_set =new User();
 			Connection con = User_DAO.gerConnection();
 			PreparedStatement ps = con.prepareStatement("select * from umadmin_supreme_begawo where name = ?");
-			ps.setString(1, user_set.getName());
+			ps.setString(1, name);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				User user =new User();
 				user.setSr_no(rs.getInt(1));
 				user.setName(rs.getString(2));
 				user.setEmail(rs.getString(3));
-				user.setPassword(rs.getString(4));
-				user.setPassword(rs.getString(5));
-				user.setPassword(rs.getString(6));
+				user.setAddress(rs.getString(4));
+				user.setDob(rs.getString(5));
+				user.setGender(rs.getString(6));
 				user.setPassword(rs.getString(7));
 				user.setNumber(rs.getLong(8));
 				
